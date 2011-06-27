@@ -1,0 +1,103 @@
+<!-- Ett html-dokument är en vanlig text-fil med innehåll som är uppmärkt med så kallade "tags", nedan försvenskat till taggar, som en webbläsare vet hur den ska presentera. -->
+<!-- Innehåll som webbläsaren skall ignorera läggs in i kommentarer formatterad som denna.
+Kommentarer börjar alltså med <!-- och slutar med -->
+<!-- Standarden för html finns här http://dev.w3.org/html5/spec/Overview.html -->
+<!DOCTYPE HTML>
+<!--
+    * Ett html-dokument börjar normalt sett med en "doctype" som talar om för webbläsaren hur dokumentet ska tolkas.
+    * Den som står ovan är doctype:n för html5, vilket är den senaste standarden för html.
+    * Det går att strunta i doctype, men det kan ge lite konstiga effekter i äldre versioner av IE
+-->
+<html>
+<!-- * Allt innehåll i html-sidan ligger mellan den öppnande och stängande "html"-taggen
+     * Det går att skippa html-taggen, det finns bara någon enstaka IE-bugg som kan orsaka problem. (Det är ovanligt att den inte används) -->
+    <head>
+<!--   * I "head"-taggen lägger man sådant som inte direkt ska visas på sidan, men som behövs för att sidan ska visas korrekt,
+         t.ex javascript och css.
+       * En viktig tag i head är "title". Innehållet i den taggen visas som rubrik på fliken i browsern
+-->
+        <title>En titel</title>
+        <meta charset="utf-8">
+    </head>
+
+
+    <body>
+    <!-- * "body"-taggen är behållaren för allt innehåll du vill ska synas.
+         * Det går att hoppa över den, nästan utan problem :-), fast det är sällan någon som gör det.
+    -->
+
+        <h1>
+            H1 är en <a href="https://developer.mozilla.org/en/HTML/Element/h1">rubrik</a>
+        </h1>
+
+        <h2>H2 är också en rubrik, men på en lägre nivå. Underrubrik om man så vill.</h2>
+
+        <h3>Även h3 är en rubrik</h3>
+
+        <p>
+            P står för "paragraph", vilket alltså är ett vanligt stycke med text eller annat innehåll.
+            <a href="https://developer.mozilla.org/en/HTML/Element/p">Läs mer om p på MDC</a>
+        </p>
+
+        <div>
+            * div fungerar ungefär som p, men betyder bara att det är en sektion (som man kanske vill applicera någon speciell stil på)
+            * div är en väldigt vanlig tagg som brukar användas för layout
+            * som du märker bryr sig inte browsern om att man lägger radbrytningar i sin html-sida. Vill man att texten ska brytas får man använda andra medel. (Gäller alla taggar utom "pre" som är för-formatterat innehåll.)
+            <a href="https://developer.mozilla.org/en/HTML/Element/div">Läs mer om div på MDC</a>
+        </div>
+
+
+        <br>
+        <!--En "br"-tagg betyder "break", vilket är en radbrytning-->
+
+        <table border="1px">
+            <tr>
+                <td>En tabell (table) består av rader (tr) som i sin tur består av celler (td - table data)</td>
+                <td>andra kolumnen</td>
+            </tr>
+            <tr>
+                <td>Tabeller kan användas för layout i ett rutmönster. </td>
+                <td>har också innehåll</td>
+            </tr>
+        </table>
+
+        <span>
+            En annan vanlig tagg är <a href="https://developer.mozilla.org/en/HTML/Element/span">span</a>. Span är till naturen "inline", ett concept som vi kommer till senare. Det innebär att den inte skapar en egen rad.
+        </span>
+
+        <span style="color:purple">
+            Span används ofta för att sätta speciell styling på enstaka ord.
+        </span>
+
+        <ul>
+            <li>Ibland har man en lista med saker som man vill visa</li>
+            <li>Då använder man ul-taggen (unordered list) eller ol-taggen (ordered list)</li>
+            <li>På listelementen (li-taggar) kan man skippa slut-taggen om man vill</li>
+        </ul>
+
+        Innehåll kan även ligga direkt i body, utan att vara i någon annan tagg.
+
+        Den kanske viktigaste taggen är "a" som i anchor, som definierar en länk någonstans i sitt "href"-attribut.
+        Se <a href="https://developer.mozilla.org/en/HTML/Element/a">MDC om a-taggen</a>
+
+        <!--
+        Uppgift: Gör en sida med två kolumner innehåll. Den vänsta kolumnen ska innehålla en navigeringsmeny med länkar.
+        Den högra skall innehålla diverse innehåll.
+
+        Ungefär så här:
+         _________________
+        |    |            |
+        | -  |            |
+        | -  |   bla      |
+        | -  |            |
+        |    |            |
+        |    |            |
+        |    |            |
+        -------------------
+
+        hint: Tabeller är ett sätt att skapa kolumner
+
+        -->
+
+    </body>
+</html>
